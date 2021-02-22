@@ -23,7 +23,6 @@ public class LogTypeInterceptor implements Interceptor {
         String log = new String(body, StandardCharsets.UTF_8);
 
         Map<String, String> headers = event.getHeaders();
-        headers.put("topic", "topic_start");
 
         if(log.contains("start"))
             headers.put("topic", "topic_start");
